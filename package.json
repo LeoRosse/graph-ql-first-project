@@ -1,12 +1,20 @@
 {
   "name": "first_proejct",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "lib/index.js",
   "license": "MIT",
+  "scripts": {
+    "build": "tsc",
+    "serve": "yarn run build && node lib/index.js",
+    "start": "node lib/index.js",
+    "deploy": "yarn run build && gcloud app deploy"
+  },
   "dependencies": {
     "apollo-server": "^2.9.3",
     "eslint": "^6.3.0",
     "firebase-admin": "^8.4.0",
-    "graphql": "^14.5.4"
+    "graphql": "^14.5.4",
+    "tslint": "^5.19.0",
+    "typescript": "^3.6.2"
   }
 }
