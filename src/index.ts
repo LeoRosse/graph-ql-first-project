@@ -31,7 +31,7 @@ const typeDefs = gql`
 
 const resolvers = {
   Query: {
-    async tweets() {
+    async users() {
       const users = await admin
         .firestore()
         .collection("users")
