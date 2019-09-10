@@ -1,7 +1,7 @@
 import * as admin from "firebase-admin";
 import { ApolloServer, gql} from "apollo-server";
 import { resolvers } from './resolvers';
-
+import typeDefs from './schema';
 const serviceAccount = require("../service-account");
 
 admin.initializeApp({
@@ -9,7 +9,7 @@ admin.initializeApp({
 });
 
 const server = new ApolloServer({
-  typeDefs: './schema.graphql',
+  typeDefs,
   resolvers,
   introspection: true
 });
