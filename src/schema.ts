@@ -1,4 +1,4 @@
-  export default `type User {
+export default `type User {
     id: ID!
     name: String!
     surname: String
@@ -18,4 +18,4 @@
     name: String!
     surname: String
     email: String!
-}`
+}`;

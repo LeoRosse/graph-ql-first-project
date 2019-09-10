@@ -1,8 +1,8 @@
 import * as admin from "firebase-admin";
 import { ApolloServer, gql} from "apollo-server";
 import { resolvers } from './resolvers';
-import typeDefs from './schema';
 const serviceAccount = require("../service-account");
+import typeDefs from "./schema"
 
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount)
