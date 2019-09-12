@@ -11,11 +11,21 @@ export default `type User {
   }
 
   type Mutation {
-    createUser(user: CreateUserInput!): User!
+    createUser(user: CreateUserInput!): String!
+    updateUser(user: UpdateUserInput!): String!
+    deleteUser(id: ID!): String
   }
   
   input CreateUserInput {
     name: String!
     surname: String
     email: String!
-}`;
+}
+
+input UpdateUserInput {
+  id: ID!
+  name: String
+  surname: String
+  email: String
+}
+`;
