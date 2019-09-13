@@ -9,7 +9,12 @@ const Query = {
       .firestore()
       .collection("users")
       .get();
-    return users.docs.map(user => user.data()) as User[];
+    return users.docs.map(user => {
+      const u = {
+        id: user.id,
+        ...user.data()
+      }
+      return u}) as User[];
   },
   async user(_: null, args: { id: string }) {
     try {
