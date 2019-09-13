@@ -13,7 +13,7 @@ export default `type User {
   type Mutation {
     createUser(user: CreateUserInput!): String!
     updateUser(user: UpdateUserInput!): String!
-    deleteUser(id: ID!): String
+    deleteUser(id: ID!): String!
   }
   
   input CreateUserInput {
